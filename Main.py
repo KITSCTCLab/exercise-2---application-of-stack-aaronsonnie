@@ -7,7 +7,7 @@ class Evaluate:
   """
     # Write your code here
 
- def __init__(self, size):
+  def __init__(self, size):
     """Inits Evaluate with top, size_of_stack and stack.
     Arguments:
       top:An integer which points to the top most element in the stack.
@@ -19,7 +19,7 @@ class Evaluate:
     self.stack = []
 
 
- def isEmpty(self):
+  def isEmpty(self):
     """
     Check whether the stack is empty.
     Returns:
@@ -106,7 +106,8 @@ class Evaluate:
           stack[-2] = stack[-2] ^ stack[-1]
           stack.pop()
     return int(stack[-1])
-  
+
+
 # Do not change the following code
 postfix_expression = input()  # Read postfix expression
 tokens = postfix_expression.split()
@@ -115,3 +116,4 @@ if evaluate.validate_postfix_expression(tokens):
     print(evaluate.evaluate_postfix_expression(tokens))
 else:
     print('Invalid postfix expression')
+
